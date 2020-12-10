@@ -16,7 +16,7 @@ api = Api(app)
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--profile-directory=Default') 
-driver = webdriver.Chrome(options=options,executable_path='../chromedriver.exe')
+driver = webdriver.Chrome(options=options,executable_path='chromedriver.exe')
 
 # driver = webdriver.Chrome("chromedriver.exe")
 # poet_link = "https://www.rekhta.org/poets/mirza-ghalib/ghazals"
