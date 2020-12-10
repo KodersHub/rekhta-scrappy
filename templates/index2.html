@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rekhta Scrapy</title>
+  <link rel="stylesheet" href="./static/CSS/style.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" /> -->
+</head>
+<body>
+    <div class ="logo">
+        <center><img src="./static/images/image.png" height="300"></center>
+    </div>
+    <div class="url">
+        <h2>Poet Ghazal URL</h2>
+          <form target=”_blank” action="" id="form-id" method="POST" enctype=multipart/form-data>
+            <div class="url-box">
+              <!-- <input type="text" name="" required=""> -->
+              <input type="url" name="url" id="url" required="">
+              <label>URL</label>
+            </div>
+            <a id ="a-id" href="">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Scrap Poetry
+            </a>
+            <!-- <button type="submit" class="btn btn-primary">Scrap Poetry</button> -->
+          </form>
+        <p class ="copyright">Powered by KODERSHUB</p>
+      </div>
+
+      
+      <script>
+        document.getElementById("a-id").onclick = function() {
+          document.getElementById("form-id").submit();
+       }
+      </script>
+
+
+</body>
+</html>
