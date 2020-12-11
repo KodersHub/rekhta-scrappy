@@ -7,6 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
 import requests
 import re
+import os
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
@@ -16,7 +17,8 @@ api = Api(app)
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--profile-directory=Default') 
-driver = webdriver.Chrome(options=options,executable_path='chromedriver.exe')
+ch_path = os.getcwd() + "/chromedriver.exe"
+driver = webdriver.Chrome(options=options,executable_path=ch_path)
 
 # driver = webdriver.Chrome("chromedriver.exe")
 # poet_link = "https://www.rekhta.org/poets/mirza-ghalib/ghazals"
