@@ -17,7 +17,7 @@ api = Api(app)
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--profile-directory=Default') 
-ch_path = os.getcwd() + "/chromedriver.exe"
+ch_path = os.getcwd() + "/chromedriver"
 driver = webdriver.Chrome(options=options,executable_path=ch_path)
 
 # driver = webdriver.Chrome("chromedriver.exe")
@@ -70,7 +70,7 @@ def writing_txt(driver):
 
     for i in range(len(links_url)):
         driver.get(links_url[i])
-        ghazal_content = driver.find_elements_by_xpath('//div[@class="pMC"]')
+        ghazal_content = driver.find_elements_by_xpath('//div[@class="pMC showTranslation"]')
         time.sleep(CHANGE_TIME)
         if not ghazal_content:
             print("Empty")
